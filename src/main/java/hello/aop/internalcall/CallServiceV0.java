@@ -1,4 +1,4 @@
-package hello.aop.internal;
+package hello.aop.internalcall;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
@@ -9,7 +9,7 @@ public class CallServiceV0 {
 
   public void external() {
     log.info("call external");
-    internal(); // 내부 메서드 호출 (this.internal());
+    internal(); // 내부 메서드 호출 (this.internal()); // proxy.internal() 이 아님
   }
 
   public void internal() {
